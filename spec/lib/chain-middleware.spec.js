@@ -18,7 +18,7 @@ describe("chainMiddleware", () => {
     }
 
     beforeEach(() => {
-        chainMiddleware = require("../../lib/chain-middleware")();
+        chainMiddleware = require("../../lib/chain-middleware");
         requestMock = require("../mock/request-mock");
         responseMock = require("../mock/response-mock");
         fakeMiddlewareCalls = [];
