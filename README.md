@@ -12,6 +12,10 @@ About
 
 This makes it easier to use middleware together by "chaining" them to be single function which can then be called.
 
+This module combines multiple middlewares together and "chains" them into a single function. Unlike normal middleware additions, you are able to merge arrays of middleware and even nested arrays of middleware. They all act as expected.
+
+This module is currently in use for [Restify] and should work for [Express] and similar servers using the same pattern for middleware.
+
 How to Use
 ----------
 
@@ -24,6 +28,8 @@ To use this, you will need to `require` this module in your module, or inject us
 
     helmet = require("helmet");
 
+    // Server must be passed in, otherwise the middleware can't
+    // be added to the server.
     function setUpMiddleware (server) {
         if (!server || !server.use) {
             throw new Error("Did not pass a server!");
@@ -47,6 +53,8 @@ To use this, you will need to `require` this module in your module, or inject us
     chainMiddleware = require("chain-middleware");
     helmet = require("helmet");
 
+    // Do not need the server passed in here as we can just
+    // return the chain middleware function.
     function setUpMiddleware () {
         return chainMiddleware([
             helmet.ieNoOpen(),
@@ -60,28 +68,6 @@ To use this, you will need to `require` this module in your module, or inject us
 
     module.exports = setUpMiddleware;
 
-    / Example using Node Chain Middleware with dependency injection
-    "use strict";
-
-    module.exports = (chainMiddleware, helmet) => {
-        function setUpMiddleware () {
-            var middleware;
-
-            return chainMiddleware([
-                helmet.ieNoOpen(),
-                [
-                    helmet.noCache(),
-                    helmet.noSniff(),
-                    helmet.xssFilter()
-                ]
-            ]);
-        }
-
-        return {
-            setUpMiddleware
-        };
-    };
-
 [Code Coverage]: https://codecov.io/github/tests-always-included/node-chain-middleware?branch=develop
 [codecov-image]: https://codecov.io/github/tests-always-included/node-chain-middleware/coverage.svg?branch=develop
 [Dev Dependencies]: https://david-dm.org/tests-always-included/node-chain-middleware/develop#info=devDependencies
@@ -89,5 +75,7 @@ To use this, you will need to `require` this module in your module, or inject us
 [Dependencies]: https://david-dm.org/tests-always-included/node-chain-middleware/develop
 [dependencies-image]: https://david-dm.org/tests-always-included/node-chain-middleware/develop.png
 [Dizzy]: https://github.com/tests-always-included/dizzy
+[Express]: http://expressjs.com/
+[Restify]: http://restify.com/
 [travis-image]: https://secure.travis-ci.org/tests-always-included/node-chain-middleware.png
 [Travis CI]: http://travis-ci.org/tests-always-included/node-chain-middleware

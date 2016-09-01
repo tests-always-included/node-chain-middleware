@@ -19,8 +19,8 @@ describe("chainMiddleware", () => {
 
     beforeEach(() => {
         chainMiddleware = require("../../lib/chain-middleware");
-        requestMock = require("../mock/request-mock");
-        responseMock = require("../mock/response-mock");
+        requestMock = "requestMock";
+        responseMock = "responseMock";
         fakeMiddlewareCalls = [];
     });
     it("works with a single bit of middleware", (done) => {
