@@ -68,12 +68,12 @@ To use this, you will need to `require` this module in your module, or inject us
 
     module.exports = setUpMiddleware;
 
-[Code Coverage]: https://codecov.io/github/tests-always-included/node-chain-middleware?branch=develop
-[codecov-image]: https://codecov.io/github/tests-always-included/node-chain-middleware/coverage.svg?branch=develop
-[Dev Dependencies]: https://david-dm.org/tests-always-included/node-chain-middleware/develop#info=devDependencies
-[devdependencies-image]: https://david-dm.org/tests-always-included/node-chain-middleware/develop/dev-status.png
-[Dependencies]: https://david-dm.org/tests-always-included/node-chain-middleware/develop
-[dependencies-image]: https://david-dm.org/tests-always-included/node-chain-middleware/develop.png
+[Code Coverage]: https://codecov.io/github/tests-always-included/node-chain-middleware?branch=master
+[codecov-image]: https://codecov.io/github/tests-always-included/node-chain-middleware/coverage.svg?branch=master
+[Dev Dependencies]: https://david-dm.org/tests-always-included/node-chain-middleware/master#info=devDependencies
+[devdependencies-image]: https://david-dm.org/tests-always-included/node-chain-middleware/master/dev-status.png
+[Dependencies]: https://david-dm.org/tests-always-included/node-chain-middleware/master
+[dependencies-image]: https://david-dm.org/tests-always-included/node-chain-middleware/master.png
 [Dizzy]: https://github.com/tests-always-included/dizzy
 [Express]: http://expressjs.com/
 [Restify]: http://restify.com/
