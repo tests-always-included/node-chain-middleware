@@ -1,6 +1,6 @@
 {
     "name": "node-chain-middleware",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Combine middleware functions together into a single function, which can then be called as standard middleware.",
     "main": "/index.js",
     "scripts": {
@@ -39,7 +39,7 @@
     "homepage": "https://github.com/tests-always-included/node-chain-middleware#readme",
     "devDependencies": {
         "codecov": "^1.0.1",
-        "eslint": "^3.13.1",
+        "eslint": "^3.14.1",
         "eslint-plugin-jasmine": "^2.2.0",
         "istanbul": "^0.4.5",
         "jasmine-node": "^1.14.5"
