@@ -16,7 +16,7 @@ This makes it easier to use middleware together by "chaining" them to be single 
 
 This module combines multiple middlewares together and "chains" them into a single function. Unlike normal middleware additions, you are able to merge arrays of middleware and even nested arrays of middleware. They all act as expected.
 
-This module is currently in use for [Restify] and should work for [Express] and similar servers using the same pattern for middleware.
+This module is currently in use for [Restiq] and [Restify] and should work for [Express] and similar servers using the same pattern for middleware.
 
 
 How to Use
@@ -75,6 +75,7 @@ To use this, you will need to `require` this module in your module, or inject us
 [Dizzy]: https://github.com/tests-always-included/dizzy
 [Express]: http://expressjs.com/
 [Restify]: http://restify.com/
+[Restiq]: https://github.com/andrasq/node-restiq
 [codecov-badge]: https://img.shields.io/codecov/c/github/tests-always-included/node-chain-middleware/master.svg
 [codecov-link]: https://codecov.io/github/tests-always-included/node-chain-middleware?branch=master
 [dependencies-badge]: https://img.shields.io/david/tests-always-included/node-chain-middleware.svg
