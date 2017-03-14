@@ -38,7 +38,7 @@
     },
     "homepage": "https://github.com/tests-always-included/node-chain-middleware#readme",
     "devDependencies": {
-        "codecov": "^1.0.1",
+        "codecov": "^2.0.1",
         "eslint": "^3.14.1",
         "eslint": "^3.14.0",
         "eslint-plugin-jasmine": "^2.2.0",
